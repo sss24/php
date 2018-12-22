@@ -2,6 +2,7 @@
 
 namespace application\core;
 
+
 class Router
 {
     protected $routes = [];
@@ -36,7 +37,22 @@ class Router
 
     public function run()
     {
-
+        if($this->match()) {
+            $class = 'application\controllers\\' . ucfirst($this->params['controller']) .'Controller';
+            if(class_exists($class)) {
+                $action = $this->params['action'] . 'Action';
+                if(method_exists($class, $action)) {
+                    $controller = new $class();
+                    $controller->$action();
+                } else {
+                    echo '<br>method is not find';
+                }
+            } else {
+                echo '<br>class ' . $this->params['controller'] . ' is not find';
+            }
+        } else {
+            echo '<br>path is not find';
+        }
     }
 
 

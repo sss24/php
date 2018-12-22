@@ -5,6 +5,10 @@ return [
         'controller' => 'main',
         'action' => 'index',
     ],
+    'account/regist' => [
+        'controller' => 'account',
+        'action' => 'regist',
+    ],
     'account/login' => [
         'controller' => 'account',
         'action' => 'login',
