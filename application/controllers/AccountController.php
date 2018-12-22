@@ -1,15 +1,16 @@
 <?php
 
 namespace application\controllers;
+use application\core\Controller;
 
-class AccountController {
+class AccountController extends Controller{
 
     public function loginAction() {
         echo '<br>login';
     }
 
-    public function registAction() {
-        echo '<br>regist';
+    public function registerAction() {
+        echo '<br>register';
     }
 
 }

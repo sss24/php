@@ -5,9 +5,9 @@ return [
         'controller' => 'main',
         'action' => 'index',
     ],
-    'account/regist' => [
+    'account/register' => [
         'controller' => 'account',
-        'action' => 'regist',
+        'action' => 'register',
     ],
     'account/login' => [
         'controller' => 'account',
