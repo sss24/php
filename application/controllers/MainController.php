@@ -6,10 +6,12 @@ use application\core\Controller;
 class MainController extends Controller{
 
     public function indexAction() {
-        echo '<br>index';
+        $this->view->render('Index website');
+
     }
 
     public function contactsAction() {
-        echo '<br>contacts';
+        $data = ['firstName' => 'Ivan', 'lstName' => 'Dorn'];
+        $this->view->render('Contacts', $data);
     }
 }

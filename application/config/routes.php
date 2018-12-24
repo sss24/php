@@ -17,8 +17,4 @@ return [
         'controller' => 'account',
         'action' => 'login',
     ],
-    'news/show' => [
-        'controller' => 'news',
-        'action' => 'show',
-    ],
 ];
