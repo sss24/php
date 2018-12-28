@@ -21,4 +21,10 @@ abstract class Controller
             return true;
         return false;
     }
+
+    public function loadView($view, $vars = []) {
+        extract($vars);
+        $path = $this->route['controller'] . '/' .  $view . '.php';
+        require "application/views/{$path}";
+    }
 }
