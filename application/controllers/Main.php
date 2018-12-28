@@ -3,7 +3,7 @@
 namespace application\controllers;
 use application\core\Controller;
 
-class MainController extends Controller{
+class Main extends Controller{
 
     public function indexAction() {
         $this->view->render('Index website');
