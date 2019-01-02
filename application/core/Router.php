@@ -14,7 +14,6 @@ class Router
         foreach ($arr as $kay => $value) {
             $this->add($kay, $value);
         }
-
     }
 
     public function add($route, $params)
@@ -38,7 +37,7 @@ class Router
     public function run()
     {
         if($this->match()) {
-            $class = 'application\controllers\\' . ucfirst($this->params['controller']) .'Controller';
+            $class = 'application\controllers\\' . ucfirst($this->params['controller']) . 'Controller';
             if(class_exists($class)) {
                 $action = $this->params['action'] . 'Action';
                 if(method_exists($class, $action)) {
@@ -54,6 +53,4 @@ class Router
             echo '<br>path is not find';
         }
     }
-
-
 }

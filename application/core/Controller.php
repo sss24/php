@@ -2,7 +2,7 @@
 
 namespace application\core;
 
-use application\core\View;
+//use application\core\View;
 
 abstract class Controller
 {
@@ -25,6 +25,6 @@ abstract class Controller
     public function loadView($view, $vars = []) {
         extract($vars);
         $path = $this->route['controller'] . '/' .  $view . '.php';
-        require "application/views/{$path}";
+        require_once "application/views/{$path}";
     }
 }

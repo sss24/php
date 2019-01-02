@@ -17,4 +17,14 @@ return [
         'controller' => 'account',
         'action' => 'login',
     ],
+    //test ajax
+    'account/test' => [
+        'controller' => 'account',
+        'action' => 'test',
+    ],
+    //test2 ajax
+    'account/test2' => [
+        'controller' => 'account',
+        'action' => 'test2',
+    ],
 ];
